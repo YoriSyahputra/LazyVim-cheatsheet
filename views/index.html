@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LazyVim // Cheatsheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-top">
+        <div class="eyebrow" id="heroEyebrow">
+          Senior Neovim Reference · Tokyo Night Palette
+        </div>
+
+        <div class="header-controls">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search shortcuts ('/' or Ctrl+K)..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <span class="search-kbd" id="searchKbd">/</span>
+            <button
+              id="searchClear"
+              class="search-clear hidden"
+              aria-label="Clear search"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div class="lang-selector-wrap">
+            <button
+              class="lang-btn"
+              id="langDropdownBtn"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="lang-flag" id="currentLangFlag">🇺🇸</span>
+              <span class="lang-label" id="currentLangLabel">EN</span>
+              <span class="dropdown-arrow">▾</span>
+            </button>
+            <div class="lang-menu hidden" id="langMenu" role="menu"></div>
+          </div>
+        </div>
+      </div>
+
+      <h1 id="heroTitle">
+        Lazy<span class="accent">Vim</span>
+        <span class="accent2">Cheatsheet</span>
+      </h1>
+      <p class="sub" id="heroSub">
+        Complete reference for default LazyVim keymaps — from editing,
+        navigation, Neo-tree, Telescope, window management, to Git integration
+        via LazyGit &amp; Gitsigns.
+      </p>
+
+      <div class="leadernote">
+        <span class="k leader"><b>&lt;leader&gt;</b></span>
+        <span id="leaderDesc">= Space bar (default LazyVim leader key)</span>
+      </div>
+    </header>
+
+    <div class="tabbar-wrap" id="tabbarWrap">
+      <nav class="tabbar" id="tabbar" aria-label="Keymap Categories"></nav>
+    </div>
+
+    <main id="mainContent">
+      <div id="tabView"></div>
+      <div id="searchView" class="search-view hidden">
+        <div class="search-header">
+          <div class="search-stats" id="searchStats">0 shortcuts found</div>
+        </div>
+        <div id="searchResultsWrap"></div>
+      </div>
+    </main>
+
+    <footer id="footerText">
+      Crafted for the LazyVim workflow — combine with
+      <span class="k">:Tutor</span> and
+      <span class="k leader">&lt;leader&gt;</span><span class="k">sk</span> to
+      explore all keymaps.
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "lazyvim-cheatsheet",
+  "version": "1.0.0",
+  "description": "Interactive LazyVim Cheatsheet Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . ",
+    "build:linux": "electron-builder --linux AppImage"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.yorisyahputra.lazyvimcheatsheet",
+    "productName": "LazyVim Cheatsheet",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "views/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Development",
+      "icon": "views/assets/icon.png"
+    }
+  }
+}
