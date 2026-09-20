@@ -39,7 +39,7 @@ cat <<'EOF' | sudo tee "$DESKTOP_DIR/lazyvim-cheatsheet.desktop" >/dev/null
 [Desktop Entry]
 Name=LazyVim Cheatsheet
 Comment=Interactive LazyVim Cheatsheet Desktop Application
-Exec=lazyvim-cs %U
+Exec=lazyvim-cs --no-sandbox %U
 Icon=lazyvim-cs
 Terminal=false
 Type=Application
