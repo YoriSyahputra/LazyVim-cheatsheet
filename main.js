@@ -1,7 +1,6 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
-app.comandLine.appendSwitch('no-sandbox');
 function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
