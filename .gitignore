@@ -3,3 +3,4 @@ dist/
 .env
 *.log
 views/lazyvim-cheatsheet.html
+views/lazyvim-cheatsheet.html
